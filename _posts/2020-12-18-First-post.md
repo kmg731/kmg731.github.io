@@ -3,9 +3,6 @@ layout: post
 title: First Post
 ---
 
-
-# Welcome
-
 Hello!  This is the first post on my blog.  I've got lots of cool projects planned that should be fun to read about.
 I'm still playing around with the HTML/CSS of this site and the layout may change a bit in the next few weeks. There
 are still some bugs I want to work out before I start posting regularly, but the actual content will be on the way
