@@ -209,9 +209,96 @@ I'm sure there's a better way to handle these kinds of command line arguments, b
 for "-f" and a separate function to handle the file I/O.  Each relevant argv[] parameter will be passed in and the 
 function can handle the rest from there.  
 
-For the file formatting, I'm going to split it into two functions.  One function will handle the actual file i/o, buffer,
-and formatting, while the second function will handle the actual encoding.  I'll use =char* format()= and
-=char* encodeFile()=
+I've decided to split up the formatting and encoding/decoding functions into two separate functions.  The first one
+=format()= will take in a file name and return a formatted buffer containg the contents of that file.  For now, the 
+formatting just removes all spaces, but I'd like to use something that can search for a char in a string without
+just looping through every char in that string.  
+
+For now, this is what I've come up with:
+
+#+BEGIN_SRC C
+char*
+format(char* fileName)
+{
+        FILE *fp;
+        fp = fopen(fileName, "r");
+
+        if(fp == NULL){
+                printf("Error: Could not open file\n");
+                return 0;
+        }
+
+        fseek(fp, 0, SEEK_END);
+        long int buffSize = ftell(fp);
+        fseek(fp, 0, SEEK_SET);
+
+        char* buffer = calloc(buffSize + 1, sizeof(char));
+
+        if (buffer == NULL){
+                printf("Error: Could not allocate buffer memory\n");
+                return 0;
+        }
+        
+        fread(buffer, sizeof(char), buffSize, fp);
+
+        char* formatBuffer = calloc(buffSize + 1, sizeof(char));
+        int fBufCounter = 0;
+
+        /* This is exactly the place where I would need find(char, char*) to search for
+         * a char in a string but looping through a string of n length for each char in 
+         * a file buffer doesn't seem like the best idea for efficiency.
+         */
+      
+        for (int i = 0; i < strlen(buffer); ++i){
+                if (buffer[i] != ' '){
+                        formatBuffer[fBufCounter] = buffer[i];
+                        ++fBufCounter;
+                }
+        }
+
+        free(buffer);
+        fclose(fp);
+        
+        return formatBuffer;
+}
+#+END_SRC
+
+The easiest way I found to handle formatting without having to modify the original buffer was to just make a new
+buffer and copy the desired characters into that, rather than trying to remove spaces from the original.  This means
+we just have to keep track of our position in the new buffer and loop through the original, skipping over any characters
+we don't want. 
+
+The actual encoding/decoding function looks like this:
+
+#+BEGIN_SRC C
+int
+processFile(char* fileName, char* option, char* key)
+{
+        FILE *newFile;
+        newFile = fopen("", "w");
+        if (newFile == NULL){
+                printf("Error: Could not open file\n");
+                return -1;
+        }
+        char* formatBuffer = format(fileName);
+
+        if (strcmp("encode", option) == 0){
+                fputs(encode(formatBuffer, key), newFile);
+        } else if (strcmp("decode", option) == 0) {
+                fputs(decode(formatBuffer, key), newFile);
+        }
+        
+        free(formatBuffer);
+        fclose(newFile);
+        
+        return 0;
+}
+#+END_SRC
+
+It's pretty simple.  It opens a new file with the filename "encode/decodeFilename.txt" (not the greatest but losing the
++ overload functionality with strings has maybe been the worst thing about this project), then makes a new string to
+hold the formatBuffer from =format()=, encodes or decodes it based off of the option passed into it, writes it all to
+the file and then finally frees the formatBuffer memory and closes the file.  
 
 * Bugs
 ** Major
