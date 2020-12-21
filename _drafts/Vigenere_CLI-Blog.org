@@ -209,16 +209,8 @@ I'm sure there's a better way to handle these kinds of command line arguments, b
 for "-f" and a separate function to handle the file I/O.  Each relevant argv[] parameter will be passed in and the 
 function can handle the rest from there.  
 
-We want this file I/O funciton to: 
-1. Open the selected file
-2. Read the contents into some buffer
-3. Format the buffer to remove tabs, spaces, punctuation, uppercase, etc.
-4. Encode/Decode the buffer
-5. Write the buffer to a new file called <filename>_[encode, decode].txt
-6. Return successful if the file was created and written to, false if there was an error
+For the actual encoding/decoding itself, I think I'd like to try working with some kind of buffer.  
 
-Since this program deals mostly with individual characters in a loop, it would be easiest to use =fgetc()= and
-=fputc()=.  
 * Bugs
 ** Major
 There was one massive oversight that occurred when making this project.  I didn't realize that Python (the sneaky 
@@ -245,3 +237,10 @@ wrapMod(int a, int b)
 One small oversight was that I forgot to subtract 'a' from the shift value, which gave a lot of weird results.  Instead 
 of a shift value being 3, it was suddenly 100 and throwing everything off. 
 * Conclusion
+
+I think I've learned a lot from this project, despite it being relatively straightforward.  I'm sure there's a lot
+on here that could be simplified or might not be written as correclty as it could be, but I feel like I've tackled 
+some things in this project that I might not have been so familiar with before.  Strings in C aren't nearly as bad
+as I expected them to be.  In fact, I'd even say doing this in C was easier than in Python.  When I first did it, 
+I had to constantly convert between strings and lists, but now, there's not really any difference between a string, 
+a list, a char or an int, they're all kind of part of the same thing.
