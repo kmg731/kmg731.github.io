@@ -1,12 +1,13 @@
----
+&#x2014;
 layout: post
 title:  "Vigenere Cypher in C"
----
+&#x2014;
 
 
 # Introduction
 
 [Original Project in Python](https://github.com/kmg731/vignereCipher)
+[GitHub Repo for this project](https://github.com/kmg731/Vigenere-in-C)
 
 About a year ago, I built a little python tool to encrypt and decrypt small messages using the Vigenere cypher.  
 It worked out without any errors and was a pretty small program overall (only about 50 lines of code).  Since it
