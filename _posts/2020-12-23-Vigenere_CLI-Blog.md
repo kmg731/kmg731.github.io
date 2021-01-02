@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: project
 title:  "Vigenere Cypher in C"
 ---
 
