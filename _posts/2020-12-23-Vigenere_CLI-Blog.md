@@ -1,8 +1,7 @@
-&#x2014;
+---
 layout: post
 title:  "Vigenere Cypher in C"
-&#x2014;
-
+---
 
 # Introduction
 
