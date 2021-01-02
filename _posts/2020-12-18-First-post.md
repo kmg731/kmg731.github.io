@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: non-project
 title: First Post
 ---
 
