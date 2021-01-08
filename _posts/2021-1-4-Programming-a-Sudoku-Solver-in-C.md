@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: project 
 title: Programming a Sudoku Solver in C
 ---
 
