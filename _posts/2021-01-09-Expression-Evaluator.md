@@ -4,12 +4,6 @@ tags: project
 title: Expression Evaluation Part 1
 ---
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 66926cd485c77bfb2241fe366c3117e6c7a386ff
-# Introduction
-
 Probably my favorite aspect of computer science is all the hardware you get to write
 programs for.  I love the idea of writing small programs that can get a lot done by 
 considering all the little details of a programming language.  I also like the idea
