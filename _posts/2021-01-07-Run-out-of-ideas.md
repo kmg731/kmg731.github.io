@@ -1,0 +1,128 @@
+---
+layout: post
+tags: thought-post non-project
+title: What to do when you run out of ideas?
+---
+
+
+# What's the problem?
+
+In the past few months, I've struggled with, what I'd call, code block (not the IDE).  It's a phenomenon that is known
+to most as writer's block or art block.  I would think most don't believe that programmers would experience this kind
+of creative block.  We've seen romantic images of the downtrodden writer or painter suddenly finding their muse and 
+being inspired to create a masterpiece, but the idea of someone sitting in an office chair staring at a blank emacs screen
+with `printf("Hello World");` mocking them is not nearly as romantic.  I'm not really here to start a debate on the 
+public perception of creativity in STEM fields; I can only write about my experience with the matter so more people
+can learn about it.  I'll be speaking about this in terms of programming but just know this applies to any hobby you 
+could think of, be it baking, gardening, woodworking, or chemical engineering.  They all have this problem
+
+This code block (as I'll call it) started after I finished my summer course.  For weeks I'd had all of my projects 
+assigned to me and had been told exactly what I needed to do.  It's nice to have that.  Rather than trying to think
+of new ideas, you always have them handed to you.  There's always a solution to the problem, you always have someone
+there to answer your questions, and it's all a decenlty well-manicured procedure.  
+When I finished the class, more than anythig, I was tired.  I'd been working for seven weeks straight and, while it
+was not always hard, the last week was exhausting.  I decided that I would take a break for a week or two and that
+some programming idea would just naturally occur to me.  
+
+That would not be the case and what followed was a 3-4 month programming drought.  
+
+I think the worst thing about this whole experience was having the desire to program something, but not having the
+ability, concentration or motivation to actually program something.  I would try to commit to a project, start a 
+tutorial series on that project, then quickly get discouraged because I felt more like a copy-paste with thoughts 
+instead of someone that was *creating* something.  Watching tutorials are great, don't get me wrong, it's just that
+copying code from a tutorial 1:1 never feels very good when that's all you can do.
+
+After many failed attempts at different projects, I began to doubt that I'd ever get out of this.  Was I just 
+fundamentally broken and doomed to be uncreative my entire life?  Was everything I'd done up to this point just
+a farce and, now faced with *real* programming, I'm actually not up to snuff?  It seemed insurmountably hard to
+overcome this.  Was I just supposed to wait until it worked itself out?  In a way, yes.  That's exactly what I 
+did.  
+
+
+# What can you do?
+
+If you're going through this right now, I don't think there's anything I can say to guarantee that you get over this. 
+The best thing I can do is try and say something that maybe hasn't been said before or explain my advice a bit better.  
+
+Most of the articles you can find on the topic will give very general and somewhat unhelpful advice.  They'll say things
+like "solve a problem with your code," "follow a programming tutorial," "build something simple," or "learn something
+new."  None of this advice is necessarily bad, it's just very unhelpful for solving any problem.  Each of these pieces
+of advice are completely valid and helpful when you actually know what you want to do but utterly fail when you have 
+no idea what you want to do.  
+
+"Solve a problem with your code" assumes you have a problem that needs solving. I can't think of a time where I had a 
+problem to solve and also didn't know what to code.  "Having a problem to solve" is about the same as saying "Have 
+ideas for things you want to program."
+
+"Follow a programming tutorial" assumes that you haven't been doing that already.  The "project based approach" 
+that this piece of advice is going for *is* the perfect way to learn to code but when you can't think of anything
+to code, the last thing you want to do is blindly follow a tutorial.  There's no real ingenuity or creativity that
+goes into just following along with a tutorial series.  On top of that, following a tutorial for something very 
+new and complicated might make you feel worse than before.  You're already dealing the feeling that you know 
+nothing and everything is complicated so the last thing you'd want to do is add something even *newer* and
+*more complicated* on top of that.  
+
+"Build something simple" is the opposite of "follow a programming tutorial."  It's a very vague piece of advice
+that doesn't really explain itself.  For example, if I'm going through a programming drought where I feel 
+I've got no creativity but want to at least create something that makes me think, would the best thing really be
+to make something so simple that it's not a challenge?  What's the point in building something so simple that it
+takes barely any effort?  When I tried this, it only reassured me that 1. I can't really do anything advanced or
+technical and 2. I'm not getting anything out of it.  What is there to learn or gain from doing something so simple?
+
+And finally, "learn something new."  This might be the most unhelpful.  It's in the same vein as "follow a 
+programming tutorial,"  which doesn't really work when you feel like you can't do anything.  My own problem with 
+this was that I wanted to learn more about one thing rather than learning one more thing.  I wanted to dive deeper
+into C, not learn something entirely new. And, even if I did learn something new, I would be starting from the same
+basic steps that I'm familiar with.  
+
+No, the solution that worked for me came in a few steps.  Simplify, rewrite, and supplement. 
+
+<span class="underline">Simplify</span>: This is different from "build something simple." Simplify means to calm down a bit and build something 
+that you know you can build or learn something using the easiest and most available method.  The program or topic
+itself might be very complicated, but you shouldn't make it any more complicated than it has to be.  One of the things 
+that I picked up when I started working more with C was the constant desire to do *everything* myself.  Instead of using 
+a library for something, I'd want to write it out myself.  An example of this:  When I wanted to make a website, 
+rather than finding a hosting platform and some premade HTML/CSS template, I wanted instead learn the entire LAMP
+stack, write my own locally hosted webserver and create my website from scratch.  It was a mess.  I had no idea where
+to start and became quickly overwhelmed with all the new information.  This was not just for a website, this was for
+every project I could think of.  If I were to play around with AI/ML at that time, I'd insist that I write my own ML
+code from scratch in C rather than just use TensorFlow or something.  The first simple project that I made was a 
+character sheet creator for Cyberpunk 2020.  I wrote it all in Python and connected it to Pillows to output the 
+information onto a character sheet.  It even had a little terminal-type system for setting character skills.  It 
+wasn't completely simple, but I did it in a way that was much more simple than if I had tried to go all out and do
+it in C from the start.
+
+<span class="underline">Rewrite</span>:  An easy way to find something to do is to go back and rewrite previous projects.  This was especially
+easy for me since I had a lot of projects originally written in (very messy) python that I wanted to port over to C.
+It's a nice initial step since I'm guaranteed to know how everything works.  The challenge and creativity comes when
+you start cleaning things up.  If you're porting the project to another language, you might find that something very
+simple in one language is much different in another.  It's a great little free project idea and it'll show you how 
+far you've come since writing those first few projects.  
+
+<span class="underline">Supplement\_</span>:  What I mean by substitute is that you've got to find something that you can do besides programming
+that is still about programming.  For me, this was starting my devblog and making tutorials on my older projects.  
+Rather than just thinking of what would be practical for me to use, I began thinking of what would be fun to write
+about.  I picked things that I already knew and wrote about how to make them, what the process was like, and the 
+difficulties I ran into along the way.  I've always loved talking about and teaching the things I'm interested in
+and just writing about the stuff I've done is a great way to keep your creativity going.  
+
+Looking back on the whole experience, I would say that I learned a lot from it and I'm better off because of it.  
+The biggest advantage that came out of this is that my motivation and enthusiasm is at an all time high.  I feel 
+the same enthusiasm I felt when I first started programming, but it's better because I have actual knowledge and 
+experience to make cooler and cleaner things.  I'm having fun again.  I also feel like I'm immune to it in the future.
+Now that I've been through it once, I know that I can get through it again and I'm better equipped for it if it comes
+again.  It's all very exciting and this is the first time I've really felt like I've made some progress in learning
+to program.
+
+There's a great article I read just before I got out of this drought that I think helped me a bit.  It seems somewhat
+well known amongst programmers, it's [Why learning to code is so damn hard](https://www.thinkful.com/blog/why-learning-to-code-is-so-damn-hard/).  It's a great article that details the 
+process of learning to code, going from the initial upswing to realizing that you don't really know that much, to
+realizing you *really* don't know anything, to getting back on your feet and actually moving forward.  I think the 
+advice for how to get out of the "Desert of despair" falls into my "mostly useless advice category" (It's written more
+as a prophylactic and assumes you're not currently in the "Desert of Despair," hopefully I've helped to make up for
+what that article lacks).  It's impressive how well that article parallels starting any new hobby.  There's always
+that first initial upswing when you start learning something new and the real test comes after that first burst of 
+motivation wears off and you have to face the full scope of the hobby.  The trick to getting through all of it is
+to just stick with it and try your best to get through the worst parts because, once you do, the real fun lies on the
+other side.  
+
