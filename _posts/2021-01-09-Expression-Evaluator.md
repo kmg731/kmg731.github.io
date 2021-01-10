@@ -1,9 +1,8 @@
 ---
 layout: post
 tags: project
-title: Expression Evaluation: Part 1
+title: Expression Evaluation Part 1
 ---
-
 
 
 # Introduction
