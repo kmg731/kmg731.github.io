@@ -1,0 +1,45 @@
+I"�<p>A few days ago I made a post about the problems I’ve been having with my dell XPS13 9350.  At the end, I said that I ordered a new wifi card.
+It came today and my laptop is fixed….sort of.<br />
+The installation was easy, just pull off the back, pull the card out, put the new one in and reconnect the two antennae.  It took a bit of fiddling
+to get it to work the first time, but this wasn’t the cards fault.  The version of lubuntu I had on there disabled wifi so I really just spent 20
+minutes looking for one option.</p>
+
+<p>After that it made sense that, because wifi was now working, I should try to throw gentoo on here and then everything will be perfect again.
+I booted into the gentoo live cd and after one net-setup command, I had wifi and I was able to install the OS in about an hour or so (maybe 
+20min of actual work since most of the time spent installing gentoo goes into waiting for compilations to finish).
+The only problem was that I was running into the same issue as before.  The card was detected, running modprobe on iwlwifi did nothing, there 
+nothing showed up in rfkill and, by all accounts it should have worked fine.  But it wasn’t.  I’d run net-setup just like before and nothing
+would happen.  All I would get was a connection error.</p>
+
+<p>On any other day, I might spend the time going through each kernel driver and try to figure out what was wrong, test out different solutions and
+just poke around.  Not today though.  I’m just tired of dealing with gentoo installs that fail right at the end because of some obscure networking
+issue.  I also got a 3D printer yesterday and my tolerance for more debugging is at an all time low.  I just don’t have it in me to hunt down some
+weird bug just to get gentoo working.  I have plans to eventually get gentoo on my laptop, but not now.  Not until I feel ready to suit up and 
+dive in.  It might be a really simple problem that I solve in 20min or it could take a week.  I don’t know and I’m not prepared to find out for 
+another month or so.</p>
+
+<p>Since I need some kind of machine running linux (and I just want this thing to run <em>something</em> already) I decided to throw fedora on it for the 
+time being.  I’m not a huge fan of the window manager/desktop manager.  I’d like either a more traditional desktop environment or some kind of 
+tiling wm.  It’s not bad though and it looks pretty slick. The small gripes I have with the layout are nothing compared to the fact that it 
+all just kind of works out of the box.  I don’t have to recompile the kernel if I want to use my bluetooth headset or wait a day just to install
+firefox.</p>
+
+<p>Gentoo is great for customization and feeling like your OS is really <em>yours</em>, but the downside to that is that you have to really 
+commit to using gentoo.  It’s not something you can just throw on an old system and expect to be finished in 20min. If you can get through 
+the install, you’re left with a barebones system.  You’ve got to know what you need to get everything running.  If you run into a bug, the 
+forums might help but usually you’re on your own.  It’s the wild west of linux.  If you want something, you’ve gotta do it yourself.  You
+want audio?  Read the wiki article, follow the guide as best you can, recompile your kernel a few times and pray nothing goes wrong.</p>
+
+<p>I’m sure I’m in the minority here though.  Your best bet for an easy gentoo install is to go with one of the desktop profiles.  Choose the KDE
+or xfce profile, wait a day after running <code class="language-plaintext highlighter-rouge">emerge -avuDN @world</code> and you should be good to go. Whenever I install gentoo, I always like to go
+inimal on everything.  I’ll usually just install Xorg and bspwm and add in anything else as needed.  This makes gentoo feel like a real sandbox
+but it is also a hellish experience to get up and running.</p>
+
+<p>I should also mention that using emacs on linux is a dream.  I’ve really only ever used emacs on my main windows laptop since I don’t really have
+a choice.  I do just about everything in emacs and there’s a real difference when it’s running on a linux machine.  Everything feels great and I’m
+excited to use it even more than I already do.</p>
+
+<p>This just turned into me rambling about gentoo.  Luckily my laptop is back in working order and I can actually start making stuff about linux and
+bash scripting.  I’ll figure something out.</p>
+
+:ET

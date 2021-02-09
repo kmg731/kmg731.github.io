@@ -1,0 +1,88 @@
+I"_$<p>I haven’t ever really talked about linux on here, this seems like a good time to start.  If you’re into programming at all, 
+it’s always nice to have access to some kind of linux machine, whether that’s a VM, a full desktop PC, or an old laptop.
+Since my main computer runs windows, I need something to run linux.  A VM is definitely the best option, but I’m just not 
+a big fan of working in a VM.  Because of this, my old Dell XPS13 9350 became my linux and all things programming laptop.
+Though I didn’t expect that I’d run into an elusive ghost of a hardware bug.</p>
+
+<p>(Before anyone gets snarky, I’ve tried wiping windows from my main computer, but it’s a laptop with an nVidia and 
+intel GPU and they do NOT play nicely with linux.  Trying to use HDMI/DP for a second monitor completely breaks the
+graphics output and I don’t have the energy to deal with that).</p>
+
+<p>I started getting into linux around the same time I started getting into programming.  I’d always heard about linux, but
+never really cared much to try it.  I’ve always just used windows because it’s got everything I need.  As I got more into
+programming though, it made sense to try out linux.  That’s what all the cool kids use, right?  I had also, naturally, run
+into all the “i use arch btw” memes and decided that I too would like to use arch btw.</p>
+
+<p>I remember I got my laptop in the mail (my parents had to ship it to me since I was away at school) and I stayed up all night
+installing arch.  It was a wild introduction to linux as a whole.  I went from having basically no experience, to having an
+actual, functioning arch install.  Little did I know, this laptop would become a living nightmare to try and put linux on.</p>
+
+<p>You see, the XPS13 9350 is a sleek and slim “business professional” laptop priced at a hefty $1500.  I was swayed by the fanfare
+of online reviews singing praise at this laptop.  I bought it thinking it would last me years and the $1500 was justified because
+the hardware was powerful (or something).  In reality, this laptop (when it’s running the stock Windows 10) is a hot piece of garbage.
+Even after a solid upgrade to any flavor of Linux, it’s still mediocre at best.  One of the two main issues with this laptop is that
+the on-board graphics card is too puny to handle the fancy quad-HD screen.  This means that this laptop has a difficult time doing
+anything that involves drawing to the screen. I remember it being alright with 1080p youtube videos, but trying to play even a simple
+game like Football Manager would make for a terrible experience.  I’ve seen Football manager run on old macbook airs.  The fact that 
+this (at the time) new $1500 laptop could barely play it was a bit telling.  Not only could it not play the simplest games, it would
+also crash constantly when trying to edit videos, use photoshop or (god forbid) use blender.  It was a nightmare to use for anything
+that wasn’t writing on google docs or watching youtube videos.  The quad HD display is also an absolute mess with display scaling. 
+Not only is this bad in linux, it was terrible in the default Windows 10.  I can’t count the amount of times I needed to use a program
+only to spend a day or so fiddling with window scaling settings just to be able to see the different buttons.  Sometimes this would work,
+but more often than not, I’d be stuck with a program that I almost needed a magnifying glass to use.</p>
+
+<p>This brings us to the second issue.  The worse of the two. The Broadcom wifi card.  Never have I run into a worse piece of hardware to work
+with.  This single tiny chip has made my life hell whenever I want to use linux on my laptop.  It first started with it needing a bit of
+fiddling.  You’d have to maybe download some extra firmware or mess around with some drivers, but it was never terrible.  Even when I first
+installed arch, it only took about an hour or two to get the wifi working.  Though as things went on, it only got worse.</p>
+
+<p>Eventually, memes aside, I settled on Gentoo as my distro of choice.  I originally wanted to see how hard the install process was, but ended
+up loving the amount of control you have over everything on the system.  I really feel like I can make everything <em>mine</em> in gentoo.  Naturally, 
+I wanted to migrate my laptop over to Gentoo.  When I first moved everything to Gentoo, I remember the wifi process being hellish but not because
+of any hardware issue.  I was using the default netifrc when I really should have been using networkmanager.  I moved over to that and my problems
+were gone.  Easy fix.</p>
+
+<p>Everything worked fine until I, stupidly, decided to try formatting the hard drive for a separate partition and ended up wiping out the main install (protip: don’t use gparted
+if you want to safely partition a hard drive with a working install on it).  I really should have known this wouldn’t work, but it was one of those ideas
+that seems really great until you’re just about finished with it and then you realize it was a complete failure.  So I was off installing Gentoo
+again on this laptop.  The install went off without a hitch (I’d done it so many god damn times by that point) except for one little problem, the base system 
+couldn’t connect to the internet.  What followed was about five different gentoo installs (all without any probem EXCEPT for this wifi problem) and about
+two weeks of on-and-off kernel debugging.  It was a complete toss up of figuring out what drivers to enable, which ones to disable, which specific ports and
+types of which driver to enable and disable, and it made no sense.  I don’t even remember how I got it all working again.  Some magic combination
+of kernel drivers must have fixed it.  It was a nightmare experience that I was just happy had ended.</p>
+
+<p>Recently though, I needed to reinstall gentoo to fix some updating problems.  I had left it sitting for a few months and the updates were failing randomly
+and I didn’t want to bother trying to remove KDE while also trying to figure out why some packages weren’t updating.<br />
+I wiped the OS and started fresh, thinking “Oh, I did it before, I know what I’m doing now.  It shouldn’t be that bad.” No it wasn’t that bad, it was worse,
+much worse.</p>
+
+<p>I should say that I had never had a problem getting internet in the livecd version of Gentoo.  I’d always just run “net-setup,” click through the options and the internet
+would be fine.  It was always the base system itself that had the problem.  With that being said, it came as a real surprise when I booted into the Gentoo live cd
+and found that, after running net-setup, I had no internet.  The interface was active and detected, the brcmfmac driver was loaded, but for some reason, 
+I couldn’t get any internet.  I went through dmesg and found some scanning error.  Googled that and found nothing.  Everything I tried always lead to a dead end.
+I tried going through with the install using a usb wifi card and thinking “maybe I just need to get all the right kernel drivers and firmware in place first.” No,
+I installed the system like normal, configured the kernel correctly and installed the firmware.  Nothing.  Everything was detected but there was still no internet.</p>
+
+<p>This went on and on until I finally gave up and tried a different distro. “Maybe it’s just Gentoo and I’ve lost my edge.” Nope.  Fedora didn’t detect the wifi
+card, no internet at all.  I even tried it with Lubuntu, the easiest and most plug-n-play distro I could think of.  Nope,  still nothing.  It’s not even detected.</p>
+
+<p>I feel like I’ve tried everything at this point.  I even ordered a set of torx screwdrivers to open it up and swap it out with a different wifi card.  But no, none
+of the wifi cards I had would fit.  Not even the one from my current 2019 laptop.  Nothing works with this laptop.  I’ve read that there were other revisions of this
+laptop that have intel cards in them.  If I’d had that, I doubt I’d even be thinking about this problem.</p>
+
+<p>The last thing I can think of doing is going online and just buying a new m.2 wifi card.  The best option seems to be to try an intel card, but there’s no guarantee
+that it will fix anything.  I could end up with the same issues, except instead of dealing with brcmfmac, I’m dealing with iwlwifi.<br />
+There’s also the likely chance (given how everything seems to go with this laptop) that the bios rejects the card.  It’s unlikely, but again, you never know with
+these kinds of stupid laptops.</p>
+
+<p>Please, don’t buy this garbage laptop and avoid broadcom wireless cards if you want to use linux.</p>
+
+<p>POST-POST EDIT:</p>
+
+<p>Writing this made me annoyed enough about the whole situation that I ended up just buying an Intel 9260 card for $15 from Amazon.  I’ve read the Gentoo page for iwlwifi,
+searched through some linux forums and it doesn’t seem like it’s been a huge problem for people.  I made sure to avoid the 9560 and AX2000 as those seemed to have more
+problems.</p>
+
+<p>If this actually works out, I can turn it back into a nice gentoo box without ever having to worry about the internet not working.  That to me is worth way more than $15 
+for a new card.</p>
+:ET
