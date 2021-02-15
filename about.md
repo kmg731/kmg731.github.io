@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: About
 permalink: /about/
@@ -14,32 +14,38 @@ each have.  My biggest goal with this is to just document the stuff I'm working 
 
 My main goal with this is to teach anyone reading how to do something, but also to solidify it in my own mind.  It should
 be mutually beneficial.  I'd like to also show this not so much as a nicely curated tutorial, but to also show the difficulties
-I faced along the way.  Maybe I'll overlook something really basic, or spend an hour debugging something that was completely 
-obvious to everyone else but me. 
+I faced along the way.  Maybe I'll overlook something really basic, or spend an hour debugging something that was completely
+obvious to everyone else but me.
 
-This also serves as a way to track my progress too.  I think it'll be cool to look back on this and see where I started and 
+This also serves as a way to track my progress too.  I think it'll be cool to look back on this and see where I started and
 where I've come, whenever that may be.
 
-I don't know if I'll post the most advanced tutorials or the most technical things compared to some other people in the devblog 
+I don't know if I'll post the most advanced tutorials or the most technical things compared to some other people in the devblog
 space, but hopefully you get something out of this blog.
 
 I also tend to be verbose when I write things out but hopefully that won't get too much in the way.  I'll try to organize
-everything somewhat neatly so you can skip any exposition or background info if you really want to.  I think it's 
-important though (and I just enjoy writing about programming as a whole). 
+everything somewhat neatly so you can skip any exposition or background info if you really want to.  I think it's
+important though (and I just enjoy writing about programming as a whole).
 
 I've got a lot of cool ideas for this blog and I'm hoping to update it regularly.   It always feels nice to have something
 to work on, even if nobody really reads it.
 
 If anyone is curious, I write all of my posts using emacs and org-mode.  It's great for writing things out and exporting
-to HTML or markdown.  
+to HTML or markdown.
+
+Right now, I'm working on learning more about web development.  I've always been much more interested in doing striaght software
+programming, but I think now is the time to finally breach that front.  My eventual goal is to move this blog away from using
+Jekyll and have it use some kind of LAMP-based blog that I wrote myself.  I don't know how practical that is when I'm just starting
+out, but I think it's a good goal to set for the future.
+
 
 # About me
 
-I originally started programming in C++ in 2016 when I took some introductory CS classes in Community College while pursuing a some gen-ed requirements 
+I originally started programming in C++ in 2016 when I took some introductory CS classes in Community College while pursuing a some gen-ed requirements
 for a math degree.  Eventually I dropped the math degree and decided that I would do what I really wanted to do, linguistics.
 I transferred to Boston University to study linguistics and was happy with that until I discovered programming during my senior year.
 I started to program in Python in hopes of taking advantage of my new gaming laptop (I wanted to use it for something more productive than
-gaming) and found that you can do so many cool things with Python.  During my C++ classes, I spent a year listening to dry lectures read 
+gaming) and found that you can do so many cool things with Python.  During my C++ classes, I spent a year listening to dry lectures read
 verbatim from learncpp.com.  There was never any real push to build anything useful in the classes, it was mostly dry lectures about concepts
 nobody really understood well enough to put to any use.  It's difficult to know why a pointer exists or what it's used for if you're never given
 anything to illustrate why it's necessary.  Discovering Python and all the various libraries showed me that there was a lot of really cool things
@@ -48,16 +54,16 @@ rediscovering CS and programming was so much fun and I spent just about all my t
 that point on, I knew I was hooked and I knew that this was what I wanted to do, whether I was paid or not, I'd do it.
 
 I picked up C around December 2019 after receiving 'The C Programming Langauge' for christmas.  Since then, C has become the main langauge I write my
-projects in just because it always feels good to write something in C.  There's a real sense of being in control that I didn't get when working with 
+projects in just because it always feels good to write something in C.  There's a real sense of being in control that I didn't get when working with
 Python. I've also started to play around a bit with Rust since I'd like to know at least one modern and recently created language.
 I'm also fascinated with Haskell and functional programming, but every time I've started to learn some Haskell, I've been pretty intimidated by it all.
 I'm excited to get more into Rust and start building things with it.  So far, it seems like a very cool language with some elements of Haskell and the
-speed/control of C without being too unsafe. 
+speed/control of C without being too unsafe.
 
 Some other biographical information:  My other major interest (if it wasn't already obvious) is linguistics and languages.  I love learning languages
 and I'm always interested to talk to anyone that speaks a different language.   Along with my linguistics major, I studied Russian and Japanese, which
-I would consider to be my two main foreign languages.  I took Latin in my senior year just for fun and I'm also interested in learning French in the 
+I would consider to be my two main foreign languages.  I took Latin in my senior year just for fun and I'm also interested in learning French in the
 future (mainly to see the development from Latin to French and see how much carries over).
 
-Along with that, my favorite bands are Radiohead, AJJ, and probably Talking Heads.  I also really love classical, mostly organ music and contrapunal 
+Along with that, my favorite bands are Radiohead, AJJ, and probably Talking Heads.  I also really love classical, mostly organ music and contrapunal
 keyboard pieces.
